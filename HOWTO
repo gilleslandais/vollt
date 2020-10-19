@@ -1,0 +1,27 @@
+# VOLLT for TAPVizieR
+G.Landais (19-oct-2020)
+
+
+2 main branches :
+- master: originale VOLLT version (Greg.Mantelet)
+  original GIT repository : https://github.com/gmantele/vollt
+- tapvizier: contains TAPVizieR updates
+
+## pull : get new VOLLT version 
+
+1. get the new version in the master branch
+git checkout master
+git pull greg master
+(note see remote repository: git remote -v)
+
+2. put the update in the tapvizier branch
+git checkout tapvizier
+git rebase
+
+## push a new verion in tapvizier branch
+git checkout tapvizier
+git add...
+git commit
+git push origin tapvizier
+
+
