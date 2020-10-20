@@ -24,4 +24,10 @@ git add...
 git commit
 git push origin tapvizier
 
+## File which needs to be merged
+- tap/AbstractTAPFactory.java: createQueryChecker no final
+- tap/config/ConfigurableTAPServlet.java: ConfigurableTAPServlet.tap not private
+- adql/parser/ADQLParser.java : AND/OR operators
+- adql/parser/adqlgrammar.jj :  AND/OR operators
+- adql/query/operand/OperationType.java AND/OR operators
 

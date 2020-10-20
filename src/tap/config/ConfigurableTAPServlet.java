@@ -67,7 +67,9 @@ public class ConfigurableTAPServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	/** TAP object representing the TAP service. */
-	private TAP tap = null;
+	//private TAP tap = null;
+	/**TODO G.Landais( for TAPVizieR) ***/
+	protected TAP tap = null;
 
 	@Override
 	public void init(final ServletConfig config) throws ServletException{
