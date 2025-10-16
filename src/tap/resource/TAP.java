@@ -21,6 +21,7 @@ package tap.resource;
  */
 
 import java.io.IOException;
+import java.net.URL;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
@@ -294,7 +295,9 @@ public class TAP implements VOSIResource {
 	 * @see #setTAPBaseURL(String)
 	 */
 	public void setTAPBaseURL(final HttpServletRequest request){
-		setTAPBaseURL(request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + request.getContextPath() + request.getServletPath());
+		URL url = this.service.getBaseUrl();
+		if (url != null) setTAPBaseURL(url.toString());
+		else setTAPBaseURL(request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + request.getContextPath() + request.getServletPath());
 	}
 
 	/* ******************** */

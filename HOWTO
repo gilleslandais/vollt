@@ -31,3 +31,19 @@ git push origin tapvizier
 - adql/parser/adqlgrammar.jj :  AND/OR operators
 - adql/query/operand/OperationType.java AND/OR operators
 
+## Merge withi a gmantele branch
+
+Add vollt/origin from gmanetele in the current project (upstream is just a name) 
+
+- git remote add upstream https://github.com/gmantele/vollt.git
+
+- git fetch upstream  
+(apparait dans git branch -a):
+
+- pull a given gmeantele branch:
+git pull upstream/fix-base-url
+
+
+# Note/history
+
+* 27-Sept-2024: update src/tap/config/ConfigurableServiceConnection.java to make the output format list before initializing ConfigurableTAPFactory

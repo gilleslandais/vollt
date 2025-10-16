@@ -200,6 +200,17 @@ public final class ConfigurableServiceConnection implements ServiceConnection {
 		// 2. CREATE THE LOGGER:
 		initLogger(tapConfig);
 
+
+		// 7. CONFIGURE OUTPUT:
+		
+		// NOTE: Gilles (27-Sept-2024): move section 7 to here to be sure that 
+		// outputFormats has been initialized before starting ConfigurableTAPFactory(TAPVizieRTAPFactory)
+		
+		// default output format = VOTable:
+		outputFormats = new ArrayList<OutputFormat>(1);
+		// set output formats:
+		addOutputFormats(tapConfig);
+		
 		// 3. BUILD THE TAP FACTORY:
 		initFactory(tapConfig);
 
@@ -213,11 +224,7 @@ public final class ConfigurableServiceConnection implements ServiceConnection {
 		initRetentionPeriod(tapConfig);
 		initExecutionDuration(tapConfig);
 
-		// 7. CONFIGURE OUTPUT:
-		// default output format = VOTable:
-		outputFormats = new ArrayList<OutputFormat>(1);
-		// set output formats:
-		addOutputFormats(tapConfig);
+				
 		// set output limits:
 		initOutputLimits(tapConfig);
 		// set fetch size:
